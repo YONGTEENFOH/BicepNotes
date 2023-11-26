@@ -25,3 +25,5 @@ How to deploy bicep templates:
 ![image](https://github.com/YONGTEENFOH/BicepNotes/assets/56257279/f9b38470-3d51-495e-b255-64c0e5b6b5fb)
 
 
+when to use param vs var?
+Also notice that you're using a variable for the Azure App Service plan name, but you're using parameters for the other names. Storage accounts and App Service apps need globally unique names, but App Service plan names need to be unique only within their resource group. This difference means it's not a concern to use the same App Service plan name across different deployments, as long as the deployments are all going into different resource groups.
